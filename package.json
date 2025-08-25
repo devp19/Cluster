@@ -1,0 +1,26 @@
+{
+  "name": "cluster",
+  "version": "1.0.0",
+  "description": "Cluster is an open-source desktop app that lets you connect devices on the same network and run jobs together - no setup, just install and join.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devp19/Cluster.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/devp19/Cluster/issues"
+  },
+  "homepage": "https://github.com/devp19/Cluster#readme",
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^37.3.1",
+    "wait-on": "^8.0.4"
+  }
+}
