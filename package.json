@@ -4,7 +4,12 @@
   "description": "Cluster is an open-source desktop app that lets you connect devices on the same network and run jobs together - no setup, just install and join.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
+    "dev:renderer": "cd renderer && npm run dev",
+    "dev:main": "wait-on http://localhost:3000 && electron ./src/main/main.js",
+    "build:renderer": "cd renderer && npm run build && npm run export -o out",
+    "build": "npm run build:renderer"
   },
   "repository": {
     "type": "git",
@@ -20,7 +25,10 @@
   "homepage": "https://github.com/devp19/Cluster#readme",
   "dependencies": {
     "concurrently": "^9.2.1",
-    "electron": "^37.3.1",
     "wait-on": "^8.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0",
+    "electron": "^37.3.1"
   }
 }
