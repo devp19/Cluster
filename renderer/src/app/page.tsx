@@ -31,8 +31,8 @@ export default function Page() {
       >
         <motion.img
           src="/logoblack.png"
-          height={40}
-          width={40}
+          height={50}
+          width={50}
           className="pointer-events-none select-none"
           initial={{ opacity: 0, rotate: 0, scale: 1 }}
           animate={
@@ -44,7 +44,7 @@ export default function Page() {
           style={{ position: 'absolute' }}
         />
         <motion.span
-          className="text-6xl"
+          className="text-6xl pl-8"
           animate={exitNow ? { opacity: 0, x: 20 } : { opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
@@ -56,7 +56,7 @@ export default function Page() {
         initial={{ opacity: 0, y: 5 }}
         animate={exitNow ? { opacity: 0, y: 5 } : { opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeInOut', delay: exitNow ? 0 : 0.9 }}
-        className="mt-3 text-sm text-gray-400 mr-11"
+        className="mt-3 text-sm text-gray-400"
       >
         Turn all your laptops into one computer
       </motion.p>
