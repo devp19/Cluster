@@ -30,7 +30,7 @@ export default function Page() {
         className="leading-none flex items-center gap-1"
       >
         <motion.img
-          src="/mesh.png"
+          src="/logoblack.png"
           height={40}
           width={40}
           className="pointer-events-none select-none"
